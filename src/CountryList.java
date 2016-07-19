@@ -102,5 +102,32 @@ public class CountryList {
 		}
 		return result;
 	} 
+	
+	public CountryList clone() {
+		
+		CountryList copy = new CountryList();
+		if(node != null ) {
+		copy.node = this.node.clone();
+		
+		}
+		return copy;
+	
+	}
+
+
+	public Country setIndex(int selectedIndex, Country countryBeforeUpdate) {
+		int c = 0;
+		CountryNode temp = this.node;
+		
+		
+		while(node != null && c < selectedIndex) {
+			temp = temp.getNext();
+			c++;
+				
+		}
+		temp.setCountry(countryBeforeUpdate);
+		
+		return countryBeforeUpdate;
+	}
 
 }

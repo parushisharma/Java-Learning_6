@@ -13,6 +13,7 @@ public class Country  {
 	private  SubscriptionYear[] subscriptions;
 	private  int c;
 	
+	
 	/**
 	 * This method is a Constructor that takes in the country name and number of years. 
 	 * @param country 				The name of the country 
@@ -106,6 +107,23 @@ public class Country  {
 	 */  
 	public boolean isEmpty() {
 	    return (subscriptions == null);
+	}
+	
+	public Country clone() {
+		Country copy = new Country(this.name,this.subscriptions.length);
+		for(int i =0; i<subscriptions.length;i++) {
+			
+			copy.subscriptions[i] = this.subscriptions[i].clone(); 
+		}
+		copy.c = this.c;
+		//String copyName = this.name;
+		return copy;
+		
+	}
+	
+	public SubscriptionYear[] getSubscriptions() {
+		
+		return subscriptions;
 	}
 	
 }

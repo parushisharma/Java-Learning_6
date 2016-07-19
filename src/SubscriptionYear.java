@@ -66,5 +66,12 @@ public class SubscriptionYear {
 	public String toString() {
 	    return "Number of Subscriptions: "+ subscriptions;
 	}
+	
+	public SubscriptionYear clone() {
+		SubscriptionYear copy = new SubscriptionYear(year,subscriptions);
+		
+		return copy;
+		
+	}
 
 }

@@ -51,6 +51,20 @@ public class CountryNode {
 		this.next = next;
 	}
 	
+	public void setCountry(Country c) {
+		this.country = c;
+	}
+	
+	public CountryNode clone() {
+		
+		CountryNode copy = new CountryNode(this.country.clone());
+		if (copy.next != null ) {
+			copy.next = this.next.clone(); 
+		}
+		
+		return copy;
+		
+	}
 	
 	
 
