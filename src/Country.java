@@ -108,7 +108,10 @@ public class Country  {
 	public boolean isEmpty() {
 	    return (subscriptions == null);
 	}
-	
+	/**
+	 * This method checks to see if the array is null
+	 * @return 			Clones the objects in this method  
+	 */  
 	public Country clone() {
 		Country copy = new Country(this.name,this.subscriptions.length);
 		for(int i =0; i<subscriptions.length;i++) {
@@ -120,6 +123,11 @@ public class Country  {
 		return copy;
 		
 	}
+	
+	/**
+	 * This method checks to see if the array is null
+	 * @return 			Getter method for subscriptions 
+	 */  
 	
 	public SubscriptionYear[] getSubscriptions() {
 		

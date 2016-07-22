@@ -103,6 +103,10 @@ public class CountryList {
 		return result;
 	} 
 	
+	/**
+	 * This method checks to see if the array is null
+	 * @return 			Clones the objects in the method 
+	 */  
 	public CountryList clone() {
 		
 		CountryList copy = new CountryList();
@@ -113,7 +117,10 @@ public class CountryList {
 		return copy;
 	
 	}
-
+	/**
+	 * This method checks to see if the array is null
+	 * @return 			Sets the Index 
+	 */  
 
 	public Country setIndex(int selectedIndex, Country countryBeforeUpdate) {
 		int c = 0;

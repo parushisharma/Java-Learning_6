@@ -3,7 +3,7 @@
  * Starts by creating a list and cloning it.
  * Then changes the data in the cloned list to test that the clone is a deep copy.
  * 
- * @author Foothill College, [YOUR NAME HERE]
+ * @author Foothill College, Parushi Sharma
  */
 
 
@@ -154,7 +154,7 @@ public class TestCloneableCountryList
 		}
 
 		TestCloneableCountryList application = new TestCloneableCountryList();
-
+		
 		CountryList listOfCountries = application.createCloneableList(countries, TestCloneableCountryList.LIST_SIZE);
 
 		// Output the countries added to the CountryList
@@ -173,9 +173,21 @@ public class TestCloneableCountryList
 		// NOTE REGARDING OUTPUT:
 		// The difference between the original and the modified node(s) in the cloned list must be apparent.
 		System.out.println("\n\nOriginal list of countries: ");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println(listOfCountries);
 
 		System.out.println("\n\nModified cloned list of countries: ");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println(clonedAndModifiedList);
 
 		// flush the error stream

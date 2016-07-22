@@ -51,10 +51,18 @@ public class CountryNode {
 		this.next = next;
 	}
 	
+	/**
+	 * This method checks to see if the array is null
+	 * @param 		c	    Sets the Country to this object of type Country
+	 */  
 	public void setCountry(Country c) {
 		this.country = c;
 	}
 	
+	/**
+	 * This method checks to see if the array is null
+	 * @return 			Clones the objects in this method  
+	 */  
 	public CountryNode clone() {
 		
 		CountryNode copy = new CountryNode(this.country.clone());
