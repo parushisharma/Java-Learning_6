@@ -16,17 +16,29 @@ public class TestCloneableCountryList
 
 	/**
 	 * Builds a list of countries to debug.
+	 * @param		allCountries		The array of all countries 
 	 */
 	private void debugListOfCountries(Country [] allCountries)
 	{
 		// TODO: The purpose is to help you debug
 		// Note: The implementation of method is optional.
+		CountryList list = new CountryList();
+		//list.getIndex(0);
+		if(list.getIndex(0) == null) {
+			System.out.println("null");
+		}
+		list.add(allCountries[0]);
+		System.out.println(allCountries[0]);
+		System.out.println(list.getIndex(0));
+		
+		
 	}
 
 	/**
 	 * Creates a list of randomly selected countries
 	 * @param allCountries      An array of Country objects
 	 * @param selectionSize     Size of the list to be cloned
+	 * @return CountryList		Create the CloneableList 
 	 */
 	private CountryList createCloneableList(Country [] allCountries, int selectionSize)
 	{	
@@ -44,13 +56,16 @@ public class TestCloneableCountryList
 	/**
 	 * Modifies one or more countries print the updated list of countries
 	 * @param listOfCountries      The list of countries to be cloned and modified.
+	 * @return CountryList			The list of countries 
 	 */
 	private CountryList testCloneableList(CountryList listOfCountries)
 	{
 		// TODO: Complete the implementation of this method.
 		//       See suggestions in the to TODOs below.
 		CountryList clonedList = (CountryList)listOfCountries.clone();
-
+		
+		// Test case
+		CountryList clonedListTest = (CountryList)listOfCountries.clone();
 
 		// TODO: Select specific indices to modify.
 		//       Alternatively, select a random index to modify
@@ -58,16 +73,21 @@ public class TestCloneableCountryList
 		int selectedIndex = random.nextInt(clonedList.size());
 
 		// TODO: To debug, temporarily hard-code the selected index to an arbitrary location.
-		//selectedIndex = 2;
+		selectedIndex = 2;
 
 		// a helper reference for the country before the update
 		Country countryBeforeUpdate = null;
+		// test case 
+		Country countryBeforeUpdateTest = null;
 
 		// a helper reference for the country after the update
 		Country modifiedCountry = null;
+		// test case 
+		Country modifiedCountryTest = null; 
 
 
 		// TODO: Modify an existing country or create a new one.
+
 		//       Then updated the selected index in the list.
 		try
 		{
@@ -75,11 +95,14 @@ public class TestCloneableCountryList
 			selectedIndex = random.nextInt(clonedList.size());
 			// get a reference to the country to be modified
 			countryBeforeUpdate = clonedList.getIndex(selectedIndex);
-
+			// test case 
+			countryBeforeUpdateTest = clonedListTest.getIndex(selectedIndex);
 			// TODO: make some changes to the country at the selected index...
-
+			
 			// TODO: Set the clonedList to the updated Country object and check that the list was updated.
 			modifiedCountry = clonedList.setIndex(selectedIndex, countryBeforeUpdate);
+			
+			modifiedCountryTest = clonedListTest.setIndex(selectedIndex, countryBeforeUpdateTest);
 		}
 		catch (IndexOutOfBoundsException exc)
 		{
@@ -96,8 +119,12 @@ public class TestCloneableCountryList
 			selectedIndex = random.nextInt(listOfCountries.size());
 			// get a reference to the country to be modified
 			countryBeforeUpdate = clonedList.getIndex(selectedIndex);
+			// test case 
+			countryBeforeUpdateTest = clonedListTest.getIndex(selectedIndex);
 			// get a reference to the subscriptions to be modified
 			SubscriptionYear [] subscriptionsBeforeUpdate = countryBeforeUpdate.getSubscriptions();
+			// test case 
+			SubscriptionYear [] subscriptionsBeforeUpdateTest = countryBeforeUpdateTest.getSubscriptions();
 
 			// TODO: make some changes to the country at the selected index...
 
@@ -116,6 +143,7 @@ public class TestCloneableCountryList
 	 * Adds the data for each country to an array of Country objects.
 	 * Adds a random selection of countries to a CountryList object.
 	 * Clones the country list and modifies the clone.
+	 * @param  args  		doing this to get rid of the error
 	 */
 	public static void main(String[] args) 
 	{
@@ -168,6 +196,10 @@ public class TestCloneableCountryList
 		//				- Modify two or more countries in the cloned linked list.
 		CountryList clonedAndModifiedList;
 		clonedAndModifiedList = application.testCloneableList(listOfCountries);
+		
+		CountryList clonedAndModifiedListTest;
+		clonedAndModifiedListTest = application.testCloneableList(listOfCountries);
+		
 
 
 		// NOTE REGARDING OUTPUT:
@@ -189,6 +221,13 @@ public class TestCloneableCountryList
 			e.printStackTrace();
 		}
 		System.out.println(clonedAndModifiedList);
+		// test case 
+		System.out.println("\n\nOriginal list of countries Test Case: ");
+		System.out.println(listOfCountries);
+		
+		System.out.println("\n\nModified cloned list of countries Test Case: ");
+		System.out.println(clonedAndModifiedListTest);
+		
 
 		// flush the error stream
 		System.err.flush();

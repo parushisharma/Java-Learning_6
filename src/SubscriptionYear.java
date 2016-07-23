@@ -67,6 +67,11 @@ public class SubscriptionYear {
 	    return "Number of Subscriptions: "+ subscriptions;
 	}
 	
+	/**
+	 * This method prints the value required 
+	 * 
+	 * @return clone of subscriptionYear objects 
+	 */
 	public SubscriptionYear clone() {
 		SubscriptionYear copy = new SubscriptionYear(year,subscriptions);
 		
