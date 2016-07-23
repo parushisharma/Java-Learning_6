@@ -1,9 +1,22 @@
+/**
+ * This is a class called CellularData that contains methods
+ * to retrieve required information. 
+ * 
+ */
+
+
+
 public class CellularData {
 
 	private Object [][]table; // private to the client
 	private int startingYear;
 	
-	// This method initializes the datatable/ header that contains the year. 
+	/**
+	 * This method initializes the datatable/ header that contains the year. 
+	 * @param	numRows		The number of rows 
+	 * @param	numColumns	The number of columns 
+	 * @param	year		The year you want it to start 
+	 */
 	public CellularData(int numRows, int numColumns, int year) {
 		// create object with header. 
 		this.table = new Object[numRows+1][numColumns+1];
@@ -15,9 +28,13 @@ public class CellularData {
 		}
 		
 	}
-	
-	// this method adds the single array of data given by the user in the 
-	// test file into the double array created in the method above. 
+	/**
+	 * this method adds the single array of data given by the user in the 
+	 * test file into the double array created in the method above.
+	 * @param	country			The name of the country
+	 * @param	num				The single array of the information associated with a country
+	 */
+	//  
 	public void addCountry(String country, double []num) {
 		
 		for(int i = 0; i<table.length;i++) { // read through the table    
@@ -30,10 +47,16 @@ public class CellularData {
 			}
 		}
 	}
-	
-	// This method first checks the name of the country given and the names of the country in the table
-	// then proceeds to find the index of the starting/ending year given by the test file to find the sum 
-	// of the subscriptions of the proper country's subscriptions  in the proper years. 
+	/**
+	 * This method first checks the name of the country given and the names of the country in the table
+	 * then proceeds to find the index of the starting/ending year given by the test file to find the sum 
+	 * of the subscriptions of the proper country's subscriptions  in the proper years.
+	 * @param	country		Name of the country
+	 * @param	sYear		The starting year
+	 * @param	eYear		The ending year 
+	 * @return	double 		The num subscriptions in the country for the period 
+	 */
+	//  
 	public double getNumSubscriptionsInCountryForPeriod(String country, int sYear, int eYear) {
 		System.out.println("Country is " + "\"" + country +"\"," + " subscriptions from " + sYear + " to " + eYear);
 		System.out.println("the output is:");
@@ -61,7 +84,11 @@ public class CellularData {
 		return sum;
     }
 	
-	//prints the array
+	/**
+	 * prints the array
+	 * @return	string  The proper object you want to print 
+	 */
+	//
 	public String toString() { 
 		for(Object []a: table) {
 			for(Object k:a) {
