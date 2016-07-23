@@ -44,6 +44,7 @@ public class Country  {
 	/**
 	 * Method acts as a constructor that will be used to create a temporary Country 
 	 * object that has the information about the name of the Country given. 
+	 * @param countryNameToFind		The name of the country you want to find
 	 */
 	public Country(String countryNameToFind) { 
 		this.name = countryNameToFind;

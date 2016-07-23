@@ -119,6 +119,8 @@ public class CountryList {
 	}
 	/**
 	 * This method checks to see if the array is null
+	 * @param		selectedIndex		The index set by the user 
+	 * @param		countryBeforeUpdate	The country you want to set it to before the update
 	 * @return 			Sets the Index 
 	 */  
 

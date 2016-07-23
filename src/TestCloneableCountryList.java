@@ -124,7 +124,7 @@ public class TestCloneableCountryList
 			// get a reference to the subscriptions to be modified
 			SubscriptionYear [] subscriptionsBeforeUpdate = countryBeforeUpdate.getSubscriptions();
 			// test case 
-			SubscriptionYear [] subscriptionsBeforeUpdateTest = countryBeforeUpdateTest.getSubscriptions();
+		//	SubscriptionYear [] subscriptionsBeforeUpdateTest = countryBeforeUpdateTest.getSubscriptions();
 
 			// TODO: make some changes to the country at the selected index...
 
