@@ -1,0 +1,88 @@
+FEEDBACK:
+
+-10% late submission.
+
+
+For future, consider starting earlier. You had about one week to complete the project!
+
+
+Good start to testing your implementation.
+    Always *verify* your result. Don't assume just because you have an output on the screen that it is correct.
+    For example, why does your cloned list lose valuable data about other elements?
+
+
+-15 Your implementation does not provide a deep copy of the linked list as required by project description.
+	All classes involved must implement the interface "Cloneable". 
+
+	Incomplete or missing implementation of "Cloneable" for CountryList, CountryNode, Country and SubscriptionYear.
+	All classes involved must implement the interface "Cloneable". 
+	For example instead of:
+		public class Country
+		{
+			// lots of stuff
+		}
+	Modify the class header to be:
+		public class Country implements Cloneable
+		{
+			// ...
+		}
+	In order to clone a list properly, the list must clone each node. 
+	The node must clone it's data portion, etc.
+	The data (here Country class) must clone each SubscriptionYear.
+	Finally class SubscriptionYear only includes primitives so it only needs to create
+	a new object of type SubscriptionYear and return that.
+
+
+
+-0 Missing implementation of "Cloneable" for class Country and CountryNode.
+   Modify the header to the interface "Cloneable". 
+
+   Next time minus for this.
+       
+       	
+-2 Missing Javadocs of your source code.
+   See feedback from previous project.
+   
+-Bita.
+
+
+
+
+sample output 1:
+List of countries: 
+
+Aruba	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.029310471	0.0	0.0	2.138784453	3.605985937	3.98141538	6.16435217	13.48254011	16.50927821	57.05427692	65.05605558	72.10431377	99.64250268	103.3849507	108.1325002	112.2180618	119.2038996	126.2103374	129.72824	0.0	131.8565401
+
+Bahrain	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.142563513	0.381286664	0.620306327	0.883522952	1.037818786	1.442965201	1.852315921	2.120546339	3.207749877	4.895960832	6.913956774	9.799631738	14.90809458	20.82466731	30.78644018	42.87476619	53.10146463	57.39322693	79.19074229	87.21698081	95.42373897	108.1005238	129.0979339	117.6607732	125.2084477	131.009991	161.1670576
+
+Bhutan	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.365843964	3.019121524	5.53491068	12.33202317	21.99686472	36.61427504	48.10756491	54.99993723	66.37918152	75.6097824
+
+China	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	6.35E-5	2.86863E-4	8.55603E-4	0.001571868	0.004018906	0.014759086	0.052592372	0.127903776	0.293245078	0.549163873	1.052726386	1.886071369	3.401326149	6.658707962	11.24474524	15.90376731	20.72082242	25.55100154	29.84470593	34.76674887	41.01687431	47.75671627	55.29808341	63.17027802	72.0713209	80.76271455
+
+Hungary	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.025469277	0.081743662	0.22472515	0.441073865	1.380157809	2.559893292	4.57770369	6.844830397	10.40708506	15.87960141	30.08846831	48.7187786	67.7194215	78.33164715	86.25517302	92.31411681	98.89553625	109.6328855	121.6811908	117.5591879	119.9427178	116.9434928	116.070556
+
+Italy	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.011299642	0.015920152	0.029097369	0.059145464	0.116270531	0.468047382	0.999024175	1.376232801	2.120206352	3.932290383	6.886434446	11.27907186	20.63367341	36.04026526	53.2698128	74.13388725	89.59054415	94.25849261	98.10254268	107.6937662	121.8642226	136.121113	150.962827	150.8856458	149.5058395	154.7970088	158.145883	159.7626858
+
+Kosovo	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+
+Senegal	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.001156238	0.001400443	0.015793657	0.075752533	0.292795434	0.9136395	2.537610482	2.982582079	5.326721238	7.330495473	10.22390743	15.35030352	25.75017105	30.49821024	44.03321374	54.83107061	64.42744115	70.16017194	83.56861759
+
+
+Testing cloning listOfCountries object...
+
+
+Testing modification of a country's name...
+Exception in thread "main" java.lang.NullPointerException
+	at InstructorTest.testCloneableList(InstructorTest.java:89)
+	at InstructorTest.main(InstructorTest.java:213)
+	
+	
+sample output 2:
+...
+Testing cloning listOfCountries object...
+
+
+Testing modification of a country's subscription information...
+Exception in thread "main" java.lang.NullPointerException
+	at InstructorTest.testCloneableList(InstructorTest.java:117)
+	at InstructorTest.main(InstructorTest.java:215)
