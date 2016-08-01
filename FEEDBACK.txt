@@ -42,7 +42,11 @@ Good start to testing your implementation.
        	
 -2 Missing Javadocs of your source code.
    See feedback from previous project.
-   
+
+
+bm 08/01:
++2 Accepted Javadocs as per my feedback your project 7 properly documented your implementation.   
+
 -Bita.
 
 
